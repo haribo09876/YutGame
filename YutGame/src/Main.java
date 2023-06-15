@@ -1,14 +1,26 @@
+import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
-
-//		(SYSO) “게임을 시작하시려면 엔터를 치세요”
-//		(SCAN)
-//		
+	
 //		(SYSO) “윷놀이, 게임 규칙 : 
 //		말은 플레이어 당 4개 씩 주어지며, 4개의 말이 모두 먼저
 //		도착하는 사람이 승리합니다”
+		System.out.println("dfef");
+
+		
+//		(SYSO) “게임을 시작하시려면 엔터를 치세요”
+		System.out.println();
+		System.out.print("게임을 시작하시려면 엔터를 치세요");
+//		(SCAN)
+		Scanner sc = new Scanner(System.in);
+//		int gameStart = sc.nextInt(
+//				if(gameStart == "")
+//					method
+//					);		
+//		
+
 //		
 //		(SCAN) 플레이어 이름 입력
 //		(SYSO)“Player1 or Player2의 이름을 입력후 Enter를 쳐주세요”
