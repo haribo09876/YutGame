@@ -4,7 +4,9 @@ public class Main {
 
 	public static void main(String[] args) {
 	
+//		(규칙) 메서드		
 		System.out.println("윷놀이 게임입니다.");
+		System.out.println();
 		System.out.println("<윷놀이 게임의 규칙>");
 		System.out.println("- Player1과 Player2로 팀을 나눕니다.");
 		System.out.println("- 2개씩 윷을 던져, 먼저 던질 선을 정합니다.");
@@ -16,20 +18,32 @@ public class Main {
 		System.out.println("※ 상대 말을 죽이는 경우와 대각선으로 진행하는 경우는 구현하지 않습니다.");
 	
 		
+		
 //		(SYSO) “게임을 시작하시려면 엔터를 치세요”
 		System.out.println();
-		System.out.print("게임을 시작하시려면 엔터를 치세요");
+		System.out.print("게임을 시작하시려면 '시작'을 입력하세요");
+		System.out.println();
 //		(SCAN)
-		Scanner sc = new Scanner(System.in);
-		int gameStart = sc.nextInt();
-//				if(gameStart == "")
-//					method
-//					);		
-//		
+		Scanner scStart = new Scanner(System.in);
+		String start = scStart.nextLine();
+	
+
+//		(SYSO)“Player1 or Player2의 이름을 입력후 Enter를 쳐주세요”
+		
+		
+		if(scStart.nextLine() == "시작") {
+			System.out.println("게임을 시작합니다");
+//			(SCAN) 플레이어 이름 입력
+			Scanner scP1 = new Scanner(System.in);
+			int player1 = scP1.nextInt();
+			Scanner scP2 = new Scanner(System.in);
+			int player2 = scP2.nextInt();
+		} else
+			System.out.println("게임을 종료합니다");
+
 
 //		
-//		(SCAN) 플레이어 이름 입력
-//		(SYSO)“Player1 or Player2의 이름을 입력후 Enter를 쳐주세요”
+
 //		
 //		(메서드) 게임 조건 확인
 //		
