@@ -53,9 +53,10 @@ public class Main {
 
 //		<게임 조건 확인>
 		rule.checkYutGameCondition();
-
-//		<반복~~~~~~>
 	
+//		<게임 반복>
+//			조건 - 반복문으로 반복 진행~~~
+		
 	}
 
 }
