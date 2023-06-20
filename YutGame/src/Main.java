@@ -2,52 +2,57 @@
 public class Main {
 
 	public static void main(String[] args) {
-	
+
+		Rule rule = new Rule();
+		Game game = new Game();
+		Player player = new Player();
+		Mal mal = new Mal();
+		MalBoard malBoard = new MalBoard();
 
 //		<게임 규칙 설명>
-//		(메서드) yutGameRule();
+		rule.yutGameRule();
 		
 //		<게임 시작>
-//		(메서드) yutGameStart();
+		game.yutGameStart();
 		
 //		<플레이어 이름 설정>		
-//		(메서드) playerNameSet();
-
-//		<말 위치 설명>		
-//		(메서드) malLocation();
+		player.playerNameSet();
+		
+//		<말 위치 설명>
+		mal.malLocation();
 
 //		<게임 조건 확인>
-//		(메서드) checkYutGameCondition();
+		rule.checkYutGameCondition();
 		
 //		<윷 던지기 (첫판) 및 결과>
-//		(메서드) throwingYutFirst();
+		game.throwingYutFirst();
 		
 //		<말 위치 설명>		
-//		(메서드) malLocation();
+		mal.malLocation();
 		
 //		<말 이동>
-//		(메서드) malMove();
+		malBoard.malMove();
 		
 //		<말 위치 설명>		
-//		(메서드) malLocation();		
+		mal.malLocation();		
 			
 //		<게임 조건 확인>
-//		(메서드) checkGameCondition();	
+		rule.checkYutGameCondition();
 		
 //		<윷 던지기 및 결과>
-//		(메서드) throwingYut();
+		game.throwingYut();
 		
 //		<말 위치 설명>		
-//		(메서드) malLocation();
+		mal.malLocation();		
 
 //		<말 이동>
-//		(메서드) malMove();
+		malBoard.malMove();
 
 //		<말 위치 설명>		
-//		(메서드) malLocation();
+		mal.malLocation();	
 
 //		<게임 조건 확인>
-//		(메서드) checkGameCondition();	
+		rule.checkYutGameCondition();
 
 //		<반복~~~~~~>
 	
