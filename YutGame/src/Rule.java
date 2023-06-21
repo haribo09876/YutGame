@@ -14,6 +14,7 @@ public class Rule {
 		System.out.println("- 윷, 모인 경우 윷을 한번 더 던질 수 있다.");
 		System.out.println("- Player들은 각각 4개의 말을 가지고 있고, 모든 말이 먼저 도착하는 사람이 승리합니다.");
 		System.out.println("※ 상대 말을 죽이는 경우와 대각선으로 진행하는 경우는 구현하지 않습니다.");
+		System.out.println();
 	}
 	
 	

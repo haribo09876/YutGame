@@ -4,7 +4,6 @@ public class Game {
 
 //		<게임 시작>
 	public static void yutGameStart() {
-		System.out.println();
 		System.out.print("게임을 시작하시려면 '시작'을 입력해주세요");
 		System.out.println();
 
@@ -13,8 +12,10 @@ public class Game {
 
 		if(start.equals("시작")) {
 			System.out.println("게임을 시작합니다");
+			System.out.println();
 		} else {
-			System.out.println("게임을 종료합니다"); 
+			System.out.println("게임을 종료합니다");
+			System.out.println();
 		}
 
 	}

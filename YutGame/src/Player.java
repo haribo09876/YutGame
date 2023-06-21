@@ -15,6 +15,7 @@ public class Player {
 		String nameP2 = scnameP2.nextLine();
 
 		System.out.println(nameP1 + "님, " + nameP2 + "님 반갑습니다");
+		System.out.println();
 	}
 
 }
