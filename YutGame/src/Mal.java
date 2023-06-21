@@ -47,7 +47,14 @@ public class Mal {
 			}
 
 		System.out.println("현재 말의 위치는");
-		System.out.println("X1 : " + malX1Location + " / X2 : " + malX2Location + " / X3 : " + malX3Location + " / X4 : " + malX4Location);
-		System.out.println("Y1 : " + malY1Location + " / Y2 : " + malY2Location + " / Y3 : " + malY3Location + " / Y4 : " + malY4Location);
+		System.out.println("10		" + "		9		" + "		8		" + "		7		" + "		6		" + "		5");
+		System.out.println("11										" + "										4");
+		System.out.println("12										" + "										3");
+		System.out.println("13										" + "										2");
+		System.out.println("14										" + "										1");
+		System.out.println("15		" + "		16		" + "		17		" + "		18		" + "		19		" + "		20");
+		System.out.println();
+		System.out.println("X1 (" + malX1Location + ") / X2 (" + malX2Location + ") / X3 (" + malX3Location + ") / X4 (" + malX4Location + ")");
+		System.out.println("Y1 (" + malY1Location + ") / Y2 (" + malY2Location + ") / Y3 (" + malY3Location + ") / Y4 (" + malY4Location + ")");
 	}
 }
