@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Player {
 
 //	<플레이어 이름 설정>
-	public static void playerNameSet() {
+	void playerNameSet() {
 		System.out.print("Player1의 이름을 입력해주세요");
 		System.out.println();
 		Scanner scnameP1 = new Scanner(System.in);

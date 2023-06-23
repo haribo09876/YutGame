@@ -2,7 +2,7 @@
 public class Rule {
 
 //	<게임 규칙 설명>
-	public static void yutGameRule() {
+	void yutGameRule() {
 		System.out.println("윷놀이 게임입니다.");
 		System.out.println();
 		System.out.println("<윷놀이 게임의 규칙>");
@@ -19,7 +19,7 @@ public class Rule {
 	
 	
 //	<게임 조건 확인>
-	public static void checkYutGameCondition() {
+	void checkYutGameCondition() {
 //		if() {
 //			
 //		} else {
