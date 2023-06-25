@@ -12,7 +12,7 @@ public class Main {
 ////        Game game = new Game();
 ////        game.play();
 //		
-////		<게임 규칙 설명>
+//		<게임 규칙 설명>
 //		rule.yutGameRule();
 //
 ////		<게임 시작 결정>
