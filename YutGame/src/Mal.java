@@ -1,74 +1,59 @@
 
 public class Mal {
 
-//	static int malX1Location = 0;
-//	static int malX2Location = 0;
-//	static int malX3Location = 0;
-//	static int malX4Location = 0;
-//	static int malY1Location = 0;
-//	static int malY2Location = 0;
-//	static int malY3Location = 0;
-//	static int malY4Location = 0;
-//	static int yootPlay = 0;
-//	
-//	Game game = new Game();
-//	
-//	
-////	<말 위치 설명>	
-//	void malLocation() {
-//		String[][] malArr = new String[8][26];
-//			malArr[0][0] = "X1";
-//			malArr[1][0] = "X2";
-//			malArr[2][0] = "X3";
-//			malArr[3][0] = "X4";
-//			malArr[4][0] = "Y1";s
-//			malArr[5][0] = "Y2";
-//			malArr[6][0] = "Y3";
-//			malArr[7][0] = "Y4";
-//// 스위치 케이스???
-//			for (int i = 0; i < 8; i++) {
-//				for (int j = 0; j < 26; j++) {
-//					if(malArr[i][j] == "X1") {
-//						malX1Location = j;
-//					} else if(malArr[i][j] == "X2") {
-//						malX2Location = j;
-//					} else if(malArr[i][j] == "X3") {
-//						malX3Location = j;
-//					} else if(malArr[i][j] == "X4") {
-//						malX4Location = j;
-//					} else if(malArr[i][j] == "Y1") {
-//						malY1Location = j;
-//					} else if(malArr[i][j] == "Y2") {
-//						malY2Location = j;
-//					} else if(malArr[i][j] == "Y3") {
-//						malY3Location = j;
-//					} else if(malArr[i][j] == "Y4") {
-//						malY4Location = j;
-//					} 
-//				} 
+	Player player1 = new Player();
+	Player player2 = new Player();
+	Game game = new Game();
+
+//	<말 위치 설명>	
+	void malLocation() {
+
+		String[][] malArray = new String[8][26];
+
+
+		int i = 0;
+		int oneOne = player1.getMal1() + game.yutNum;
+		int oneTwo = player1.getMal2();
+		int oneThree = player1.getMal3();
+		int oneFour = player1.getMal4();
+		int twoOne = player2.getMal1();
+		int twoTwo = player2.getMal2();
+		int twoThree = player2.getMal3();
+		int twoFour = player2.getMal4();
+		
+		malArray[0][oneOne] = "P1 말1";
+		malArray[1][oneTwo] = "P1 말2";
+		malArray[2][oneThree] = "P1 말3";
+		malArray[3][oneFour] = "P1 말4";
+		malArray[4][twoOne] = "P2 말1";
+		malArray[5][twoTwo] = "P2 말2";
+		malArray[6][twoThree] = "P2 말3";
+		malArray[7][twoFour] = "P2 말4";
+		
+		for (int j = 0; j < 8; j++) {
+			for (int k = 0; k < 25; k++) {
+				System.out.print(malArray[j][k] + " ");
+			}
+			System.out.println();
+		}
+		
+		
+//		p2Mal3 = 
+//		for (int i = 0; i < malArray.length; i++) {
+//			for (int j = 0; j < malArray.length; j++) {
+//				malArray[i][j];
 //			}
+//		}
+
+		
+
 //
-//		System.out.println("현재 말의 위치 입니다");
-//		System.out.println();
-//		System.out.println("10		" + "		9		" + "		8		" + "		7		" + "		6		" + "		5");
-//		System.out.println();
-//		System.out.println("11										" + "										4");
-//		System.out.println();
-//		System.out.println("12										" + "										3");
-//		System.out.println();
-//		System.out.println("13										" + "										2");
-//		System.out.println();
-//		System.out.println("14										" + "										1");
-//		System.out.println();
-//		System.out.println("15		" + "		16		" + "		17		" + "		18		" + "		19		" + "		20");
-//		System.out.println();
-//		System.out.println("X1 (" + malX1Location + ") / X2 (" + malX2Location + ") / X3 (" + malX3Location + ") / X4 (" + malX4Location + ")");
-//		System.out.println("Y1 (" + malY1Location + ") / Y2 (" + malY2Location + ") / Y3 (" + malY3Location + ") / Y4 (" + malY4Location + ")");
-//	}
-//	
-//	void malMove() {
-//		Game.yootPlay;
-////		malX1Location = malX1Location + ;
-//		System.out.println(malX1Location);
-//	}
+//		int p1Mal1Loc = player1.getMal1() + game.yutNum;
+//
+//		System.out.println(p1Mal1Loc);
+
+	}
+
+
+
 }
