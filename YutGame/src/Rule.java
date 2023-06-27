@@ -1,27 +1,11 @@
 import java.util.Scanner;
 
 public class Rule {
-
-	Player player = new Player();
 	
-	String player1NameRule = "";
-	String player2NameRule = "";
+	String player1Name = "";
+	String player2Name = "";
 
 	Scanner sc = new Scanner(System.in);
-
-//	<플레이어 이름 설정>
-	void playerNameSet() {
-		System.out.print("Player1의 이름 ? ");
-		this.player1NameRule = sc.nextLine();
-
-		System.out.print("Player2의 이름 ? ");
-		this.player2NameRule = sc.nextLine();
-	}
-
-//	void check() {
-//		System.out.println(player1NameRule);
-//		System.out.println(player2NameRule);
-//	}	
 	
 //	<게임 규칙 설명>
 	void yutGameRule() {
@@ -49,8 +33,19 @@ public class Rule {
 		System.out.println();
 	}
 	
+//	<플레이어 이름 설정>
+	void playerNameSetting(Player player) {
+		System.out.print("Player1의 이름 ? ");
+		this.player1Name = sc.nextLine();
+		player.setPlayer1Name(player1Name);		
+		
+		System.out.print("Player2의 이름 ? ");
+		this.player2Name = sc.nextLine();
+		player.setPlayer2Name(player2Name);		
+	}
+
 //	<게임 조건 확인>
-	void checkYutGameCondition() {
+	void checkYutGameCondition(Player player) {
 		if ((player.getMal1() > 21 || player.getMal2() > 21)) {
 			System.out.println("게임 종료");
 			if(player.getMal1() > 21) {
@@ -62,7 +57,6 @@ public class Rule {
 //			game.throwingYut();
 			System.out.println();
 		}
-
 	}
 
 }

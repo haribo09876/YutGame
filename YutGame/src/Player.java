@@ -1,10 +1,10 @@
 
 public class Player {
 
-	String player1Name = "";
-	String player2Name = "";
-	int mal1 = 0;
-	int mal2 = 0;
+	private String player1Name = "";
+	private String player2Name = "";
+	private int mal1 = 0;
+	private int mal2 = 0;
 
 	public Player() {
 		super();
