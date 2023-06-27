@@ -1,38 +1,59 @@
 
 public class Player {
 
-	private String playerName = "";
-	private int mal = 0;
-	
+	String player1Name = "";
+	String player2Name = "";
+	int mal1 = 0;
+	int mal2 = 0;
+
 	public Player() {
 		super();
 	}
 
-	public Player(String playerName, int mal) {
+	public Player(String player1Name, String player2Name, int mal1, int mal2) {
 		super();
-		this.playerName = playerName;
-		this.mal = mal;
+		this.player1Name = player1Name;
+		this.player2Name = player2Name;
+		this.mal1 = mal1;
+		this.mal2 = mal2;
 	}
 
-	public String getPlayerName() {
-		return playerName;
+	public String getPlayer1Name() {
+		return player1Name;
 	}
 
-	public void setPlayerName(String playerName) {
-		this.playerName = playerName;
+	public void setPlayer1Name(String player1Name) {
+		this.player1Name = player1Name;
 	}
 
-	public int getMal() {
-		return mal;
+	public String getPlayer2Name() {
+		return player2Name;
 	}
 
-	public void setMal(int mal) {
-		this.mal = mal;
+	public void setPlayer2Name(String player2Name) {
+		this.player2Name = player2Name;
+	}
+
+	public int getMal1() {
+		return mal1;
+	}
+
+	public void setMal1(int mal1) {
+		this.mal1 = mal1;
+	}
+
+	public int getMal2() {
+		return mal2;
+	}
+
+	public void setMal2(int mal2) {
+		this.mal2 = mal2;
 	}
 
 	@Override
 	public String toString() {
-		return "Player [playerName=" + playerName + ", mal=" + mal + "]";
+		return "Player [player1Name=" + player1Name + ", player2Name=" + player2Name + ", mal1=" + mal1 + ", mal2="
+				+ mal2 + "]";
 	}
-	
+		
 }

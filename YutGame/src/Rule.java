@@ -1,16 +1,28 @@
 import java.util.Scanner;
 
-public class Rule extends Player {
+public class Rule {
 
-	String p1Name = "";
-	String p2Name = "";
-
-	Player player1 = new Player();
-	Player player2 = new Player();
-//	Game game = new Game();
+	Player player = new Player();
+	
+	String player1NameRule = "";
+	String player2NameRule = "";
 
 	Scanner sc = new Scanner(System.in);
 
+//	<플레이어 이름 설정>
+	void playerNameSet() {
+		System.out.print("Player1의 이름 ? ");
+		this.player1NameRule = sc.nextLine();
+
+		System.out.print("Player2의 이름 ? ");
+		this.player2NameRule = sc.nextLine();
+	}
+
+//	void check() {
+//		System.out.println(player1NameRule);
+//		System.out.println(player2NameRule);
+//	}	
+	
 //	<게임 규칙 설명>
 	void yutGameRule() {
 		System.out.println("\t윷놀이 게임의 규칙");
@@ -36,27 +48,15 @@ public class Rule extends Player {
 		}
 		System.out.println();
 	}
-
-//	<플레이어 이름 설정>
-	void playerNameSet() {
-		System.out.print("Player1의 이름 ? ");
-		this.p1Name = sc.nextLine();
-		player1.setPlayerName(p1Name);
-
-		System.out.print("Player2의 이름 ? ");
-		this.p2Name = sc.nextLine();
-		player2.setPlayerName(p2Name);
-		System.out.println();
-	}
-
+	
 //	<게임 조건 확인>
 	void checkYutGameCondition() {
-		if ((player1.getMal() > 21 || player2.getMal() > 21)) {
+		if ((player.getMal1() > 21 || player.getMal2() > 21)) {
 			System.out.println("게임 종료");
-			if(player1.getMal() > 21) {
-				System.out.println("승자는 " + player1.getPlayerName() + "님 입니다");
-			} else if(player1.getMal() > 21) {
-				System.out.println("승자는 " + player2.getPlayerName() + "님 입니다");
+			if(player.getMal1() > 21) {
+				System.out.println("승자는 " + player.getPlayer1Name() + "님 입니다");
+			} else if(player.getMal2() > 21) {
+				System.out.println("승자는 " + player.getPlayer2Name() + "님 입니다");
 			}
 		} else {
 //			game.throwingYut();
