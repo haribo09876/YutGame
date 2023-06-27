@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class Rule extends Player {
 
-	String player1Name = "";
-	String player2Name = "";
+	String p1Name = "";
+	String p2Name = "";
 
 	Player player1 = new Player();
 	Player player2 = new Player();
@@ -40,21 +40,24 @@ public class Rule extends Player {
 //	<플레이어 이름 설정>
 	void playerNameSet() {
 		System.out.print("Player1의 이름 ? ");
-		player1Name = sc.nextLine();
-		player1.playerName = player1Name;
+		this.p1Name = sc.nextLine();
+		player1.setPlayerName(p1Name);
 
 		System.out.print("Player2의 이름 ? ");
-		player2Name = sc.nextLine();
-		player2.playerName = player2Name;
+		this.p2Name = sc.nextLine();
+		player2.setPlayerName(p2Name);
 		System.out.println();
 	}
 
 //	<게임 조건 확인>
 	void checkYutGameCondition() {
-		if ((player1.getMal1() > 21 || player2.getMal1() > 21)) {
+		if ((player1.getMal() > 21 || player2.getMal() > 21)) {
 			System.out.println("게임 종료");
-			System.out.println("승자는 " + player1.playerName + "님 입니다");
-			System.out.println();
+			if(player1.getMal() > 21) {
+				System.out.println("승자는 " + player1.getPlayerName() + "님 입니다");
+			} else if(player1.getMal() > 21) {
+				System.out.println("승자는 " + player2.getPlayerName() + "님 입니다");
+			}
 		} else {
 //			game.throwingYut();
 			System.out.println();

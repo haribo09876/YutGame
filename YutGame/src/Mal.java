@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Mal {
+public class Mal extends Rule{
 
 	Player player1 = new Player();
 	Player player2 = new Player();
@@ -9,8 +9,8 @@ public class Mal {
 
 	Scanner sc = new Scanner(System.in);
 
-	int mal1Loc = rule.player1.mal1;
-	int mal2Loc = rule.player2.mal1;
+	int mal1Loc = rule.player1.getMal();
+	int mal2Loc = rule.player2.getMal();
 
 	int malToMove = 0;
 	int plusLocNum = 0;

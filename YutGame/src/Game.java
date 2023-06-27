@@ -8,7 +8,7 @@ public class Game{
 	
 	// <윷 던지기 (첫판) 및 결과>
 	void throwingYutFirst() {
-		System.out.println("OO님, 윷을 던졌습니다");
+		System.out.println(rule.p1Name + "님, 윷을 던졌습니다");
 		this.yutNum = (int) (Math.random() * 5 + 1);
 		switch (yutNum) {
 		case 1:
@@ -37,9 +37,9 @@ public class Game{
 		System.out.println();
 	}
 
-	// <윷 던지기 (첫판) 및 결과>
+	// <윷 던지기 및 결과>
 	void throwingYut() {
-		System.out.println("OO님, 윷을 던졌습니다");
+		System.out.println(rule.player1.getPlayerName() + "님, 윷을 던졌습니다");
 		this.yutNum = (int) (Math.random() * 6 + 1);
 
 		switch (yutNum) {
