@@ -1,59 +1,45 @@
+import java.util.Scanner;
 
 public class Mal {
 
 	Player player1 = new Player();
 	Player player2 = new Player();
 	Game game = new Game();
+	Rule rule = new Rule();
 
-//	<말 위치 설명>	
+	Scanner sc = new Scanner(System.in);
+
+	int mal1Loc = rule.player1.mal1;
+	int mal2Loc = rule.player2.mal1;
+
+	int malToMove = 0;
+	int plusLocNum = 0;
+
+	int[][] malArray = new int[2][26];
+
+//	<말 위치>	
 	void malLocation() {
-
-		String[][] malArray = new String[8][26];
-
-
-		int i = 0;
-		int oneOne = player1.getMal1() + game.yutNum;
-		int oneTwo = player1.getMal2();
-		int oneThree = player1.getMal3();
-		int oneFour = player1.getMal4();
-		int twoOne = player2.getMal1();
-		int twoTwo = player2.getMal2();
-		int twoThree = player2.getMal3();
-		int twoFour = player2.getMal4();
-		
-		malArray[0][oneOne] = "P1 말1";
-		malArray[1][oneTwo] = "P1 말2";
-		malArray[2][oneThree] = "P1 말3";
-		malArray[3][oneFour] = "P1 말4";
-		malArray[4][twoOne] = "P2 말1";
-		malArray[5][twoTwo] = "P2 말2";
-		malArray[6][twoThree] = "P2 말3";
-		malArray[7][twoFour] = "P2 말4";
-		
-		for (int j = 0; j < 8; j++) {
-			for (int k = 0; k < 25; k++) {
-				System.out.print(malArray[j][k] + " ");
-			}
-			System.out.println();
-		}
-		
-		
-//		p2Mal3 = 
-//		for (int i = 0; i < malArray.length; i++) {
-//			for (int j = 0; j < malArray.length; j++) {
-//				malArray[i][j];
-//			}
-//		}
-
-		
-
-//
-//		int p1Mal1Loc = player1.getMal1() + game.yutNum;
-//
-//		System.out.println(p1Mal1Loc);
-
+		malArray[0][mal1Loc] = 1;
+		malArray[1][mal2Loc] = 2;
+		System.out.println("말1의 위치는 " + mal1Loc + "입니다");
+		System.out.println("말2의 위치는 " + mal2Loc + "입니다");
+		System.out.println();
 	}
 
+//	<말 이동>	
+	void malMove() {
+		plusLocNum = game.yutNum;
+		System.out.println("말 '1'번과 '2'번 중 이동시킬 말을 입력해주세요");
+		this.malToMove = sc.nextInt();
+		System.out.println();
+		if (malToMove == 1) {
+			this.mal1Loc = mal1Loc + plusLocNum;
+		} else if (malToMove == 2) {
+			this.mal2Loc = mal2Loc + plusLocNum;
+		}
+		
 
+	
+	}
 
 }

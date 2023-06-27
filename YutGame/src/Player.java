@@ -1,17 +1,17 @@
 
 public class Player {
 
-	private String playerName = "";
-	private int mal1 = 0;
-	private int mal2 = 0;
-	private int mal3 = 0;
-	private int mal4 = 0;
+	String playerName = "";
+	int mal1 = 0;
+	int mal2 = 0;
+	int mal3 = 0;
+	int mal4 = 0;
 
 	public Player() {
 		super();
 	}
 
-	public Player(String playerName, int mal1, int mal2, int mal3, int mal4, int resultNum, String result) {
+	public Player(String playerName, int mal1, int mal2, int mal3, int mal4) {
 		super();
 		this.playerName = playerName;
 		this.mal1 = mal1;
