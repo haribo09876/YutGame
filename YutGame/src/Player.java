@@ -1,8 +1,8 @@
 
 public class Player {
 
-	private String player1Name = "일번";
-	private String player2Name = "이번";
+	private String player1Name = "";
+	private String player2Name = "";
 	private int mal1 = 0;
 	private int mal2 = 0;
 

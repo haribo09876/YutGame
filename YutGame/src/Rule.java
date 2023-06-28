@@ -3,7 +3,9 @@ import java.util.Scanner;
 public class Rule {
 	
 	Game game = new Game();
-	
+	Mal mal = new Mal();
+	MalBoard malBoard = new MalBoard();
+		
 	String player1Name = "";
 	String player2Name = "";
 
@@ -23,44 +25,36 @@ public class Rule {
 		System.out.println();
 	}
 
-//	<게임 시작 결정>
-	void yutGameStart() {
-		System.out.println("게임을 시작하시려면 '시작'을 입력해주세요");
-		String start = sc.nextLine();
-		if (start.equals("시작")) {
-			System.out.println("게임을 시작합니다");
-		} else {
-			System.out.println("게임을 종료합니다");
-		}
-		System.out.println();
-	}
-	
 //	<플레이어 이름 설정>
 	void playerNameSetting(Player player) {
-		System.out.print("Player1의 이름 ? ");
+		System.out.println("Player1의 이름을 입력해주세요");
 		this.player1Name = sc.nextLine();
 		player.setPlayer1Name(player1Name);		
 		
-		System.out.print("Player2의 이름 ? ");
+		System.out.println("Player2의 이름을 입력해주세요");
 		this.player2Name = sc.nextLine();
-		player.setPlayer2Name(player2Name);		
+		player.setPlayer2Name(player2Name);
+		System.out.println();		
 	}
 
 //	<게임 조건 확인>
-	
 	void checkYutGameCondition(Player player) {
 		for (int i = 0; i < 100; i++) {
 			if(player.getMal1() < 21 && player.getMal2() < 21) {
-//				game.throwingYut(player1);
+				game.throwingYut(player);
+				malBoard.malBoardStatus(player);
+				mal.malLocation(player);
 //				말1조정 or 조정된 값
 				if(player.getMal1() > 21) {
-					System.out.println("승자는 " + player.getPlayer1Name() + "님 입니다");
+					System.out.println("승자는 '" + player.getPlayer1Name() + "' 님 입니다");
 					i = 100;
 				} else {
-//				game.throwingYut(player2);
+				game.throwingYut(player);
+				malBoard.malBoardStatus(player);
+				mal.malLocation(player);
 //				말2조정 or 조정된 값
 					if(player.getMal2() > 21) {
-						System.out.println("승자는 " + player.getPlayer2Name() + "님 입니다");
+						System.out.println("승자는 '" + player.getPlayer2Name() + "' 님 입니다");
 						i = 100;
 					}
 				}
