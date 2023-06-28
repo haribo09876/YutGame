@@ -9,8 +9,6 @@ public class Mal {
 	int mal1Loc = 0;
 	int mal2Loc = 0;
 
-
-
 //	<말 위치>	
 	void malLocation(Player player) {
 		this.mal1Loc = player.getMal1();

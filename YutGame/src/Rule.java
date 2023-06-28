@@ -47,7 +47,7 @@ public class Rule {
 //				말1조정 or 조정된 값
 				if(player.getMal1() > 21) {
 					System.out.println("승자는 '" + player.getPlayer1Name() + "' 님 입니다");
-					i = 100;
+					break;
 				} else {
 				game.throwingYut(player);
 				malBoard.malBoardStatus(player);
@@ -55,7 +55,7 @@ public class Rule {
 //				말2조정 or 조정된 값
 					if(player.getMal2() > 21) {
 						System.out.println("승자는 '" + player.getPlayer2Name() + "' 님 입니다");
-						i = 100;
+						break;
 					}
 				}
 			}
