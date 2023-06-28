@@ -3,10 +3,10 @@ public class MalBoard {
 
 	Mal mal = new Mal();
 	
-	int mal1Loc = mal.mal1Loc;
-	int mal2Loc = mal.mal2Loc;
+	int mal1Loc = 0;
+	int mal2Loc = 0;
 		
-		void malBoardStatus() {
+		void malBoardStatus(Player player) {
 		System.out.println("현재 말의 위치 입니다");
 		System.out.println();
 		System.out.println("10		" + "		9		" + "		8		" + "		7		" + "		6		" + "		5");
@@ -21,8 +21,8 @@ public class MalBoard {
 		System.out.println();
 		System.out.println("15		" + "		16		" + "		17		" + "		18		" + "		19		" + "		20");
 		System.out.println();
-		System.out.println("말1의 위치 : " + mal1Loc);
-		System.out.println("말2의 위치 : "  + mal2Loc);
+		System.out.println("말1의 위치 : " + player.getMal1());
+		System.out.println("말2의 위치 : "  + player.getMal2());
 	}
 
 }

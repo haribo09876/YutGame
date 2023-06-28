@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class Rule {
 	
+	Game game = new Game();
+	
 	String player1Name = "";
 	String player2Name = "";
 
@@ -54,7 +56,7 @@ public class Rule {
 				System.out.println("승자는 " + player.getPlayer2Name() + "님 입니다");
 			}
 		} else {
-//			game.throwingYut();
+			game.throwingYut(player);
 			System.out.println();
 		}
 	}
