@@ -3,22 +3,19 @@ public class MalBoard {
 
 	int mal1Loc = 0;
 	int mal2Loc = 0;
-		
-		void malBoardStatus(Player player) {
 
+//	<말판 확인>
+	void malBoardStatus(Player player) {
 		String[] mal1Array = new String[26];
 		String[] mal2Array = new String[26];
-
+		
 		for (int i = 0; i < mal1Array.length; i++) {
 			if(player.getMal1() == i)
 			mal1Array[i] = player.getPlayer1Name();
-		}
-		
-		for (int i = 0; i < mal1Array.length; i++) {
+		} for (int i = 0; i < mal2Array.length; i++) {
 			if(player.getMal2() == i)
 			mal2Array[i] = player.getPlayer2Name();
 		}
-		
 		System.out.println("\t\t\t\t\t\t\t\t\t\t<말판>");
 		System.out.println();
 		System.out.print("10 (" + mal1Array[10] + " / " + mal2Array[10] + ")\t\t9 (" + mal1Array[9] + " / " + mal2Array[9]);
@@ -37,7 +34,6 @@ public class MalBoard {
 		System.out.print(")\t\t17 (" + mal1Array[17] + " / " + mal2Array[17] + ")\t\t18 (" + mal1Array[18] + " / " + mal2Array[18]);
 		System.out.println(")\t\t19 (" + mal1Array[19] + " / " + mal2Array[19] + ")\t\t20 (" + mal1Array[20] + " / " + mal2Array[20] + ")");
 		System.out.println();
-
 	}
 
 }

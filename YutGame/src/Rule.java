@@ -1,16 +1,16 @@
 import java.util.Scanner;
 
 public class Rule {
-	
+
 	Game game = new Game();
 	Mal mal = new Mal();
 	MalBoard malBoard = new MalBoard();
-		
+
 	String player1Name = "";
 	String player2Name = "";
 
 	Scanner sc = new Scanner(System.in);
-	
+
 //	<게임 규칙 설명>
 	void yutGameRule() {
 		System.out.println("\t윷놀이 게임의 규칙");
@@ -29,37 +29,36 @@ public class Rule {
 	void playerNameSetting(Player player) {
 		System.out.println("Player1의 이름을 입력해주세요");
 		this.player1Name = sc.nextLine();
-		player.setPlayer1Name(player1Name);		
-		
+		player.setPlayer1Name(player1Name);
+
 		System.out.println("Player2의 이름을 입력해주세요");
 		this.player2Name = sc.nextLine();
 		player.setPlayer2Name(player2Name);
-		System.out.println();		
+		System.out.println();
 	}
 
-//	<게임 조건 확인>
+//	<게임 조건 확인 및 게임 반복>
 	void checkYutGameCondition(Player player) {
 		for (int i = 0; i < 100; i++) {
-			if(player.getMal1() < 21 && player.getMal2() < 21) {
-				game.throwingYut(player);
+			if (player.getMal1() < 21 && player.getMal2() < 21) {
+				game.throwingYutP1(player);
 				malBoard.malBoardStatus(player);
 				mal.malLocation(player);
-//				말1조정 or 조정된 값
-				if(player.getMal1() > 21) {
+				if (player.getMal1() >= 21) {
 					System.out.println("승자는 '" + player.getPlayer1Name() + "' 님 입니다");
 					break;
 				} else {
-				game.throwingYut(player);
-				malBoard.malBoardStatus(player);
-				mal.malLocation(player);
-//				말2조정 or 조정된 값
-					if(player.getMal2() > 21) {
+					game.throwingYutP2(player);
+					malBoard.malBoardStatus(player);
+					mal.malLocation(player);
+					if (player.getMal2() >= 21) {
 						System.out.println("승자는 '" + player.getPlayer2Name() + "' 님 입니다");
 						break;
 					}
 				}
 			}
-		} System.out.println("게임 종료");
+		}
+		System.out.println("게임 종료");
 	}
-	
+
 }
