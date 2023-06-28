@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class Mal {
 
+	Game game = new Game();
+	
 	Scanner sc = new Scanner(System.in);
 
 	int mal1Loc = 0;
@@ -21,8 +23,8 @@ public class Mal {
 	}
 
 //	<말 이동>	
-	void malMove(Player player, Game game) {
-		plusNum = game.yutTotalNum;
+	void malMove(Player player) {
+//		plusNum = game.yutTotalNum;
 		System.out.println("말 '1'번과 '2'번 중 이동시킬 말을 입력해주세요");
 		malToMove = sc.nextInt();
 		System.out.println();

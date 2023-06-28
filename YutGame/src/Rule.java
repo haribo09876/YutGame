@@ -47,18 +47,25 @@ public class Rule {
 	}
 
 //	<게임 조건 확인>
+	
 	void checkYutGameCondition(Player player) {
-		if ((player.getMal1() > 21 || player.getMal2() > 21)) {
-			System.out.println("게임 종료");
-			if(player.getMal1() > 21) {
-				System.out.println("승자는 " + player.getPlayer1Name() + "님 입니다");
-			} else if(player.getMal2() > 21) {
-				System.out.println("승자는 " + player.getPlayer2Name() + "님 입니다");
+		for (int i = 0; i < 100; i++) {
+			if(player.getMal1() < 21 && player.getMal2() < 21) {
+//				game.throwingYut(player1);
+//				말1조정 or 조정된 값
+				if(player.getMal1() > 21) {
+					System.out.println("승자는 " + player.getPlayer1Name() + "님 입니다");
+					i = 100;
+				} else {
+//				game.throwingYut(player2);
+//				말2조정 or 조정된 값
+					if(player.getMal2() > 21) {
+						System.out.println("승자는 " + player.getPlayer2Name() + "님 입니다");
+						i = 100;
+					}
+				}
 			}
-		} else {
-			game.throwingYut(player);
-			System.out.println();
-		}
+		} System.out.println("게임 종료");
 	}
-
+	
 }
